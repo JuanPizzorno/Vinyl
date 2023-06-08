@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <form action="/productos/guardar" method="post">
+
+        <fieldset>
+            <legend>Nombre del álbum</legend>
+            <input type="text" name="name" id="name">
+        </fieldset>
+
+        <fieldset>
+            <legend>Artista</legend>
+            <input type="text" name="artist" id="artist">
+        </fieldset>
+
+        <fieldset>
+            <legend>Año de lanzamiento</legend>
+            <input type="text" name="year" id="year">
+        </fieldset>
+
+        <fieldset>
+            <legend>Precio</legend>
+            <input type="text" name="price" id="price">
+        </fieldset>
+
+        <fieldset>
+            <legend>Género</legend>
+            <input type="radio" name="genre" id="genre-pop" value="pop">
+            <label for="genre-pop">Pop</label>
+            <input type="radio" name="genre" id="genre-rock" value="rock">
+            <label for="genre-rock">Rock</label>
+            <input type="radio" name="genre" id="genre-hiphop" value="hiphop">
+            <label for="genre-hiphop">Hip Hop</label>
+        </fieldset>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
