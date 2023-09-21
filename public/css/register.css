@@ -1,0 +1,148 @@
+@import url("main.css");
+
+#registerBox {
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+  }
+
+  #formularioDeRegistro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    border: solid 1px #FAD000;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #332F2E;
+    transition: all 450ms;
+  }
+
+  #formularioDeRegistro {
+    box-shadow: 0px 0px 0px #FAD000;
+  }
+  #formularioDeRegistro:hover {
+    box-shadow: 0px 0px 20px #FAD000;
+    background-color: #2E3332;
+  }
+
+  #addAvatar {
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    font-size: 14px;
+    margin: 5px 30px;
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: whitesmoke;
+    padding: 10px;
+    transition: all 450ms;
+  }
+
+  #addAvatar:hover {
+    background-color: #EAB10F;
+      border: solid 1px black;
+  }
+
+  .campos {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #FAD000;
+    margin: 10px;
+    color: black;
+  }
+
+  #nombreCompleto {
+    display: flex;
+  }
+  
+  #terminosYCondiciones {
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #FAD000;
+    align-items: center;
+    margin: 10px;
+    background-color: whitesmoke;
+    padding: 10px;
+  }
+  
+  #nombre,
+  #apellido {
+    width: 50%;
+  }
+
+  .terms {
+    width: 10%;
+    height: 10px;
+  }
+  
+  #terminos {
+    width: 90%;
+    font-size: 16px;
+  }
+  
+  #botonesRegistro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #imagenUsuario {
+    display: none;
+  }
+
+  #cuentaExistente {
+    color: whitesmoke;
+    text-align: center;
+  }
+
+  .rButton {
+    padding: 10px;
+    background-color: whitesmoke;
+    border: solid 1px #FAD000;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 20px;
+    transition: all 450ms;
+}
+
+.rButton:hover {
+  background-color: #EAB10F;
+    border: solid 1px black;
+}
+
+#errors {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#errors ul li {
+  font-size: 14px;
+}
+
+#errors ul li i {
+  color: #52a8ff;
+}
+
+.errorForm {
+  border: #52a8ff 3px solid;
+}
+
+/* css botones viene de la vista de producto */
+
+@media (min-width: 768px) {
+  #formularioDeRegistro {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1028px) {
+  #formularioDeRegistro {
+    width: 40%;
+  }
+}

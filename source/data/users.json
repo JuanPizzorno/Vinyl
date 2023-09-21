@@ -1,0 +1,29 @@
+[
+  {},
+  {
+    "nombre": "Maria",
+    "apellido": "Pizzorno",
+    "email": "mariaevapizzorno@gmail.com",
+    "password": "Marias911!",
+    "sku": null,
+    "imagenUsuario": "imagenUsuario-1694128404712-337764507.jpg"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Pizzorno",
+    "email": "jmpizzorno.97@gmail.com",
+    "password": "Planetagol9!",
+    "sku": 1,
+    "imagenUsuario": "imagenUsuario-1694128960435-796721588.jpg"
+  },
+  {
+    "nombre": "Martin",
+    "apellido": "Chavez",
+    "email": "martinchavez@gmail.com",
+    "password": "Martin900!",
+    "passwordConf": "Martin900!",
+    "terms": "terminos",
+    "imagenUsuario": "imagenUsuario-1695252428481-729464130.jpg",
+    "sku": 3
+  }
+]

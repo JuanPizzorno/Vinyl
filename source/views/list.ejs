@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bienvenido a Vinyl</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <%- include('./partials/head.ejs') %>
+    </head>
+
+<body>
+  
+  <%- include('./partials/header.ejs') %>
+
+    <!--Productos destacados-->
+    <section id="mainProducts">
+      <h2>Productos destacados</h2>
+      <ul id="productosIndex">
+        <% products.forEach (e=> {%>
+        <li class="product">
+          <a href="/productos/detalle/<%= e.sku %>" class="itemIndex">
+            <img
+              src="/products/<%= e.image %>" alt=""
+              alt="Producto"
+              class="productImgIndex"
+            />
+            <article class="description">
+              <h3 class="nombreIndex"><%= e.name %></h3>
+              <p class="precioIndex">$<%= e.price %></p>
+            </article>
+            <a href="/productos/detalle/<%= e.sku %>" class="cartProduct"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </a>
+        </li>
+        <% })%>
+      </ul>
+    </section>
+
+    <nav id="buttonNew">
+    <button type="submit" id="new">
+      <a href="/productos/nuevo">Nuevo</a>
+    </button>
+    </nav>
+
+
+    <!--Mapa-->
+
+    <section id="map">
+        <div id="text">
+          <h2>¿Dónde nos encontramos?</h2>
+          <p>
+            En el barrio de Belgrano, nos encontramos en Monroe 860. Podés
+            encontrarnos de <b>Lunes</b> a <b>Viernes</b> de 10 a 18 hs, y los
+            <b>Sábados</b> de 10 a 13 hs.
+          </p>
+        </div>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8401.148031841098!2d-58.447477528382905!3d-34.54852087109433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb436efe09303%3A0xfb39818e7624ac76!2sDigital%20House!5e0!3m2!1ses!2sar!4v1668530738708!5m2!1ses!2sar"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+       <!--Info-->
+
+       <section id="info">
+        <article class="infoart">
+          <i class="fa-solid fa-credit-card"></i>
+          <h3>Medios de pago</h3>
+          <p>
+            Ofrecemos 3 y 6 cuotas sin interéses, todos los días y con todos los
+            bancos!
+          </p>
+        </article>
+        <article class="infoart">
+          <i class="fa-solid fa-credit-card"></i>
+          <h3>Envíos</h3>
+          <p>
+            Hacemos envíos a todo el país! Y si tu compra supera los 10.000$, es
+            GRATIS!
+          </p>
+        </article>
+        <article class="infoart">
+          <i class="fa-solid fa-gift"></i>
+          <h3>Pedidos personalizados</h3>
+          <p>
+            Contactactanos a pedidos@vinyl.com.ar, consultá por stock!
+          </p>
+        </article>
+      </section>
+    
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

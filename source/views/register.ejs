@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vinyl - Registro</title>
+    <script defer src="/register.js"></script>
+    <link rel="stylesheet" href="/css/register.css" />
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <main id="registerBox">
+        
+            <form 
+                action="/save" 
+                method="post" 
+                enctype="multipart/form-data"
+                id="formularioDeRegistro"
+            >
+
+            <!--Campos completables-->
+        <section id="nombreCompleto">
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre"
+              class="campos"
+              required
+              value="<%= locals.errors && !locals.errors.nombre && locals.data ? data.nombre : '' %>"
+            />
+            <% if (locals.errors && locals.errors.nombre) {%>
+            <p><%= locals.errors.nombre.msg %></p>
+            <% } %>
+
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              placeholder="Apellido"
+              class="campos"
+              required
+              value="<%= locals.errors && !locals.errors.apellido && locals.data ? data.apellido : '' %>"
+            />
+            <% if (locals.errors && locals.errors.apellido) {%>
+            <p><%= locals.errors.apellido.msg %></p>
+            <% } %>
+          </section>
+
+          <input
+            type="file"
+            name="imagenUsuario"
+            class="inputFile"
+            id="imagenUsuario"
+            accept=".jpg, .png, .jpeg, .gif"
+          />
+          <label for="imagenUsuario" id="addAvatar">Cargar foto de perfil</label>
+          <% if (locals.errors && locals.errors.imagenUsuario) {%>
+          <p><%= locals.errors.imagenUsuario.msg %></p>
+          <% } %>
+  
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo electrónico"
+            class="campos"
+            required
+            value="<%= locals.errors && !locals.errors.email && locals.data ? data.email : null %> "
+          />
+          <% if (locals.errors && locals.errors.email) {%>
+          <p><%= locals.errors.email.msg %></p>
+          <% } %>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Creá tu contraseña"
+            class="campos"
+            required
+          />
+          <% if (locals.errors && locals.errors.password) {%>
+          <p><%= locals.errors.password.msg %></p>
+          <% } %>
+
+          <input
+            type="password"
+            name="passwordConf"
+            id="confirmPassword"
+            placeholder="Confirmá tu contraseña"
+            class="campos"
+            required
+          />
+          <% if (locals.errors && locals.errors.passwordConf) {%>
+          <p><%= locals.errors.passwordConf.msg %></p>
+          <% } %>
+
+          <section id="terminosYCondiciones">
+
+            <input
+              type="checkbox"
+              name="terms"
+              id="terms"
+              value="terminos"
+              class="terms"
+              required
+            />
+            <label for="terms" id="terminos"
+              >Acepto términos de servicio y privacidad</label
+            >
+          </section>
+  
+          <div id="errors">
+            <ul></ul>
+          </div>
+  
+          <!--Creá tu cuenta o iniciá sesión-->
+          <section id="botonesRegistro">
+            <button class="rButton">Crear cuenta</button>
+            <p id="cuentaExistente">¿Ya tenés una cuenta?</p>
+            <a href="/login" id="buttonRegister">
+              <div class="rButton">Iniciá sesión</div>
+            </a>
+          </section>
+        </form>
+        </form>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>

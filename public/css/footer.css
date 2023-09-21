@@ -1,0 +1,22 @@
+footer {
+    background-color: black;
+}
+#footer-icon-bar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.ficon {
+    margin: 10px;
+    padding: 5px;
+    width: 13px;
+    transition: color 450ms;
+    color: #FAD000;
+}
+
+.ficon:hover {
+    color: white;
+}

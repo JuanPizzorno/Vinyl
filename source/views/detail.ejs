@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <main id="main-productDetail">
+
+    <% if (product) { %>
+        <article>
+
+            <picture >
+                <img src="/products/<%= product.image %>" alt="" id="imagenProducto">
+            </picture>
+
+            <nav id="descripcion">
+                <h2 id="nombreDeProducto"><%= product.name %></h2> 
+                <span id="nombreDeArtista"><%= product.artist %></span>
+                <h4 id="precioProducto"><%= product.price %></h4>
+            </nav>
+
+            <div class="buttons">
+                <button class="tooltip">Agregar al carrito (No disponible)</button>
+                <button class="tooltip">Comprar (No disponible)</button>
+            
+
+            <a href="/productos/editar/<%= product.sku %>" class="button"> Editar </a>
+            <form action="/productos/borrar?m=DELETE" method="post">
+                <input type="hidden" name="sku" value="<%= product.sku %>">
+                <button type="submit" class="button">Borrar</button>
+            </form>
+
+
+        </div>
+        </article>
+
+    <% } else { %>
+        <h2>No se encontró el producto
+            <a href="/productos">Volver</a>
+        </h2> 
+        
+    <% } %>
+
+</main>
+    
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

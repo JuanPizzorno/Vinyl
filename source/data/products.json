@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Trinchera",
+    "artist": "Babasónicos",
+    "year": 2022,
+    "price": 11000,
+    "genre": "pop",
+    "sku": 2,
+    "image": "imagen-1686685946378.jpg"
+  },
+  {
+    "name": "Unlimited Love",
+    "artist": "Red Hot Chili Peppers",
+    "year": 2022,
+    "price": 13000,
+    "genre": "rock",
+    "sku": 4,
+    "image": "imagen-1690489363415.png"
+  },
+  {
+    "name": "Hotel Miranda",
+    "artist": "Miranda",
+    "year": 2023,
+    "price": 16000,
+    "genre": "pop",
+    "sku": 6,
+    "image": "imagen-1691016733999.png"
+  },
+  {
+    "name": "Unknown Pleasures",
+    "artist": "Joy Division",
+    "year": 1979,
+    "price": 16000,
+    "genre": "rock",
+    "sku": 7,
+    "image": "imagen-1691010333630.jpg"
+  },
+  {
+    "name": "AM",
+    "artist": "Arctic Monkeys",
+    "year": 2013,
+    "price": 16000,
+    "genre": "rock",
+    "sku": 8,
+    "image": "imagen-1691010617580.jpg"
+  },
+  {
+    "name": "Blonde",
+    "artist": "Frank Ocean",
+    "year": 2016,
+    "price": 14000,
+    "genre": "hiphop",
+    "sku": 9,
+    "image": "imagen-1691016588886.jpeg"
+  },
+  {
+    "name": "Turn Blue",
+    "artist": "The Black Keys",
+    "year": 2014,
+    "price": 15000,
+    "genre": "rock",
+    "sku": 10,
+    "image": "imagen-1692994521317.png"
+  }
+]

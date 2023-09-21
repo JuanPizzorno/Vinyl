@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <header>
+    <article id="topbar">
+        
+      <section id="logoSearch">
+
+        <a href="/productos" id="logo">    
+          <img src="/images/vinyl1.jpg" alt="Logo Vinyl"/>
+        </a>
+          
+          <!-- barra busqueda -->
+          <form action="/search" method="get" id="barra-busqueda">
+            <input type="text" name="q" placeholder="Buscar" id="buscador" />
+            <button type="submit" id="buttonLupa">
+              <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+            </button>
+          </form>
+      </section>
+
+          <ul class="icon-nav-bar">
+
+            <% if (!user) {%>
+              <li class="welcome">Bienvenido, invitado!</li>
+              <li class="icon">
+                <a href="/login"><i class="fa-solid fa-user hicon"></i></a>
+              </li>
+    
+              <% } else {%>
+
+              <li class="welcome">Bienvenido, <%= user.nombre %></li>
+
+              <li class="icon">
+                <a href="/profile"> <i class="fa-solid fa-user hicon"></i> </a>
+              </li>
+              <li class="icon">
+                <a href="/logout"><i class="fa-solid fa-door-open hicon"></i></a>
+              </li>
+
+              <% } %>
+
+              <li class="icon">
+                <a href="/productos/productCart"
+                  ><i class="fa-solid fa-cart-shopping hicon"></i
+                ></a>
+              </li>
+
+              <li>
+              <div class="dropdown"> 
+                <i class="fas fa-bars" id="menu-icon"></i>
+                <div class="dropdown-content">
+                  <a href="/productos">Productos</a>
+                  <a href="/contacto">Contacto</a>  
+                  <a href="/">Sobre Vinyl</a>
+                </div>
+              </div>
+              </li>
+
+          </ul>
+
+
+          
+          <!--<ul class="link-nav-bar">
+            <li id="linksHeader"><a href="/productos">Productos</a></li>
+            <li id="linksHeader"><a href="/contacto">Contacto</a></li>
+            <li id="linksHeader"><a href="/">Sobre Hanyou</a></li>
+            <% if (!user) {%>
+            <li id="linksHeader"><a href="/register">Crea tu cuenta</a></li>
+            <% } else {%>
+            <li id="linksHeader">
+              <a href="/productos/productCart">Mis compras</a>
+            </li>
+            <% } %> 
+          </ul>-->
+    </article>
+
+    
+         
+</header>
+</body>
+</html>

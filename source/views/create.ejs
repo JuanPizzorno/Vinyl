@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vinyl - Crear Producto</title>
+    <link rel="stylesheet" href="/css/create.css" />
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <main id="createNewProductMain">
+    
+    <form action="/productos/guardar" method="post" enctype="multipart/form-data" id="createNewProductForm">
+
+        <fieldset class="campo">
+            <label class="nombre">Nombre del álbum</legend>
+            <input type="text" name="name" class="input">
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Artista</legend>
+            <input type="text" name="artist" class="input">
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Año de lanzamiento</legend>
+            <input type="text" name="year" class="input">
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Precio</legend>
+            <input type="text" name="price" class="input">
+        </fieldset>
+
+        <fieldset class="campoGenero">
+            
+            <label for="genre-pop">Pop</label>
+            <input type="radio" name="genre" class="input" value="pop">
+            <label for="genre-rock">Rock</label>
+            <input type="radio" name="genre" class="input" value="rock">
+            <label for="genre-hiphop">Hip Hop</label>
+            <input type="radio" name="genre" class="input" value="hiphop">
+            
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Imagen</legend>
+            <input type="file" name="imagen" id="imagen">
+        </fieldset>
+
+        <button type="submit" class="boton">Guardar</button>
+        <button type="submit" class="boton">
+            <a href="/productos">Volver</a>
+        </button>
+    </form>
+
+</main>
+
+
+
+<%- include('./partials/footer.ejs') %>
+</body>
+</html>

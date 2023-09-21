@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edición de producto</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <main id="main-productEdit">
+    
+    <form action="/productos/actualizar?m=PUT" method="post" enctype="multipart/form-data" id="editProductForm">
+        <input type="hidden" name="sku" value= "<%= product.sku %>">
+
+        <fieldset class="campo">
+            <label class="nombre">Nombre del álbum</label>
+            <input type="text" name="name" id="name" value= "<%= product.name %>">
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Artista</label>
+            <input type="text" name="artist" id="artist" value= "<%= product.artist %>">
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Año de lanzamiento</label>
+            <input type="text" name="year" id="year" value= "<%= product.year %>">
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Precio</label>
+            <input type="text" name="price" id="price" value= "<%= product.price %>">
+        </fieldset>
+
+        <fieldset class="campo-genero">
+            <input type="radio" name="genre" id="genre-pop" value="pop" <%= product.genre == 'pop' ? 'checked' : '' %>>
+            <label for="genre-pop">Pop</label>
+            <input type="radio" name="genre" id="genre-rock" value="rock" <%= product.genre == 'rock' ? 'checked' : '' %>>
+            <label for="genre-rock">Rock</label>
+            <input type="radio" name="genre" id="genre-hiphop" value="hiphop" <%= product.genre == 'hiphop' ? 'checked' : '' %>>
+            <label for="genre-hiphop">Hip Hop</label>
+        </fieldset>
+
+        <fieldset class="campo">
+            <label class="nombre">Archivos</label>
+            <input type="file" name="imagen" id="imagen">
+            
+        </fieldset>
+
+        <button type="submit" class="boton">Guardar</button>
+        <button class="boton">
+            <a href="/productos">Volver</a>
+        </button>
+        
+    </form>
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

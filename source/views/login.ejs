@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vinyl - Iniciar sesión</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <script defer src="/js/login.js"></script>
+    <%- include('./partials/head') %>
+  </head>
+
+  <body>
+    <%- include('./partials/header') %>
+
+    <main id="loginForm">
+
+      <form action="/access" method="post" id="loginBox">
+        <input
+          type="text"
+          name="userName"
+          placeholder="Correo electrónico"
+          class="camposLogin"
+          id="userEmail"
+          value="<%= locals.errors && !locals.errors.userName && locals.data ? data.userName : '' %>"
+        />
+        
+        <% if (locals.errors && locals.errors.userName) {%>
+          <p><%= locals.errors.userName.msg %></p>
+          <% } %>
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          class="camposLogin"
+          id = "passwordLogin"
+          value="<%= locals.errors && !locals.errors.password && locals.data ? data.password : '' %>"
+        />
+
+        <% if (locals.errors && locals.errors.password) {%>
+        <p><%= locals.errors.password.msg %></p>
+        <% } %>
+
+        <label id="recordar">
+          <input type="checkbox" name="remember" value="true"/> Recordar mi
+          usuario y contraseña
+        </label>
+        <a href="/recuperarContrasena" id="olvideContraseña"
+          >¡Olvidé mi contraseña!</a
+        >
+
+        <div id="errors">
+          <ul></ul>
+        </div>
+
+        <button type="submit" class="lButton">Iniciar sesión</button>
+        <p id="toRegister">¿No tenés cuenta?</p>
+        <a href="/register" class="lButton"><div>Crear cuenta</div></a>
+      </form>
+
+    </main>
+
+    <%- include('./partials/footer') %>
+
+  </body>
+</html>

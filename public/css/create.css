@@ -1,0 +1,95 @@
+@import url("main.css");
+
+#createNewProductMain {
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+}
+
+#createNewProductForm {
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    border: solid 1px #FAD000;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #332F2E;
+    transition: all 450ms;
+  }
+
+  #createNewProductForm:hover {
+    box-shadow: 0px 0px 20px #FAD000;
+    background-color: #2E3332;
+  }
+
+  #imagen{
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+  }
+
+  .boton {
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    font-size: 14px;
+    margin: 5px 30px;
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: whitesmoke;
+    padding: 10px;
+    transition: all 450ms;
+  }
+
+  .boton:hover {
+    background-color: #EAB10F;
+    border: solid 1px black;
+  }
+
+  .campo {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #FAD000;
+    margin: 10px;
+    background-color: whitesmoke;
+  }
+
+  .nombre {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .input {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .campoGenero {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    border: 1px solid #FAD000;
+    align-items: center;
+    margin: 10px;
+    background-color: whitesmoke;
+    padding: 10px;
+  }
+
+  
+@media (min-width: 768px) {
+  #createNewProductForm {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1028px) {
+  #createNewProductForm {
+    width: 40%;
+  }
+}
