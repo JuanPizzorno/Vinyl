@@ -1,6 +1,7 @@
 # Vinyl
 Proyecto de E-Commerce en desarrollo avanzado. 
 
+Tecnologías utilizadas: Javascript, Node Js, Express, HTML, CSS.
 Siguiendo el patrón de diseño MVC, el proyecto funciona con base de datos en formato JSON para usuarios y productos. 
 
 En funcionamiento:
