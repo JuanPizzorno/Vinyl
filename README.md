@@ -16,7 +16,7 @@ En funcionamiento:
 -Utilización de cookies
 -CSS responsive en todas las vistas.
 
-Pendiente:
+En desarrollo:
 -Inicio de sesión.
 -Migrar base de datos a SQL.
 -Integración de APIS.
